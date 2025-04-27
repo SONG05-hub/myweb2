@@ -1,0 +1,330 @@
+/*通用文字样式和间距清除*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 14px;
+    font-family: '微软雅黑';
+    color:#444;
+
+}
+
+/*容器样式*/
+#container{
+    width:1200px;
+    margin:0 auto;
+}
+
+/**页眉样式*/
+header{
+    height:200px;
+    background-image:url(../images/yemei.jpg);
+    background-repeat: no-repeat;
+    background-position:  0;
+    background-size: 1200px,100%;
+}
+nav{
+    height:50px;
+    background-color: #ededed;
+}
+
+#navLeft{
+    float:left;
+}
+#navLeft span{
+    display:inline-block;
+    margin-top: 10px;
+    width:150px;
+    height:30px;
+    text-align: center;
+    border-right: 2px solid #cbcaca;
+}
+
+#navLeft a{
+    color:#5b5959;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#navLeft a:hover,#news a:hover{
+    text-decoration: underline;
+}
+
+#navRight{
+    float:right;
+    margin-right:70px;
+    margin-top: 10px;;
+}
+
+#navRight input{
+    width: 150px;
+    height: 25px;
+    border: 1px solid #bcb8b8;
+    border-radius: 5px 0 0 5px;
+}
+#navRight button{
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/search.jpg);
+    float: right;
+    background-size: 100%;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+}
+/* 轮播图片 */
+/*轮廓图片1200px 350px*/
+@keyframes turnAnimation{
+    0%{background-image: url(../images/turn1.jpg);}
+    33%{background-image: url(../images/turn2.jpg);}
+    66%{background-image: url(../images/turn3.jpg);}
+}
+#turn{
+    height: 350px;
+    background-image: url(../images/turn1.jpg);
+    /* background-size: 1200px 350px; */
+    animation: turnAnimation 10s linear infinite;
+}
+/*子内容区域*/
+/*共用样式*/
+.content{
+    float:left;
+ 
+    margin-top: 10px;
+}
+/*不同样式*/
+#spirite{
+    width:790px;
+    margin-right: 10px;
+}
+#news{
+    width:400px;
+}
+#representative{
+    width:1200px;
+}
+/*标题样式共用*/
+.content h2{
+    width: 150px;
+    height: 50px;
+    background-color: #191942;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+    /*文字粗细*/
+    font-weight: 400;
+    /*字符间距*/
+    letter-spacing: 2px;
+}
+/*分隔线*/
+.content>div{
+    border-top: 2px solid #191942;
+}
+/*尖角效果*/
+.content h2::after{
+    content: "";
+    border-left: 20px solid #191942;
+    border-top: 25px solid #fff;
+    border-bottom: 25px solid #fff;
+    float:right;
+}
+#representative h2::after{
+    content: "";
+    border: 0;
+}
+
+/*#spirite h2::after, #news h2::after{
+        content: "";
+    border-left: 20px solid #191942;
+    border-top: 25px solid #fff;
+    border-bottom: 25px solid #fff;
+    float:right;
+*/
+
+#representative h2{
+    margin: 0 auto;
+}
+/*1内容*/
+#spirite p{
+    margin: 10px 0;
+    text-indent: 2em;
+    line-height: 20px;
+    text-align: justify;
+}
+/*2内容*//*图标*/
+#news li{
+    list-style-position: inside;
+    list-style-image:url(../images/) ;
+    margin: 10px 0;
+}
+#news a{
+    color:#444;
+    text-decoration: none;
+}
+/*3*/
+.content_info{
+    float:left;
+    width:390px;
+    margin-right: 15px;
+}
+/*清除最后一个div右边距*/
+.content_info:last-child{
+    margin-right: 0;
+}
+.content_info img{
+    width: 100px;
+    height: 200px;
+    float:left;
+
+}
+.content_info span{
+    line-height: 20px;
+    text-align: justify;
+    padding: 6px 12px;
+    width: 228px;
+    display: inline-block;/*宽度设置*/
+    box-sizing: border-box;/*避免padding影响整个盒子大小*/
+}
+footer{
+    clear:both;
+    background-color:#191942;
+    text-align:center;
+    padding:25px 0;
+    color:#ccc;
+    line-height: 30px;
+}
+/*子页面title*/
+#title{
+    height: 30px;
+    padding:5px 0;
+    border-bottom: 2px solid #191942;
+    line-height: 30px;
+}
+#title img{
+    width: 30px;
+    float: left;
+    margin-right: 5px;
+}
+
+/*2页面内容*/
+#content_xinxi2 article{
+    border-bottom: 2px #666 dotted ;
+    padding:15px 0 ;
+
+}
+#content_xinxi2 p{
+    text-indent: 2em;
+    margin: 10px;
+    text-align: justify;
+    line-height: 22px;
+}
+/*1页面内容*/
+#sub_nav{
+    height: 300px;
+    background-image: url('../images/bg_spirite.jpg');
+    background-position: 0;
+    text-align: center;
+    color: #fff;
+    margin: 5px 0;
+}
+.filter{
+    height: 100%;
+    background-color: rgba(25,29,66,27%);
+}
+#sub_nav h2{
+
+    letter-spacing: 21px;
+    font-size: 30px;
+    padding: 135px 0 21px;
+}
+#sub_nav a{
+    color: #fff;
+    margin: 24px;
+}
+.subContent{
+    margin: 10px 0;
+}
+.subContent_title{
+    display: flex;
+    align-items: center;
+}
+.subContent_title :first-child{
+    width: 15px;
+    height: 30px;
+    background-color: #191942;
+}
+.subContent_title :last-child{
+    height: 2px;
+    background-color: #191942;
+    flex-grow: 1;
+}
+.subContent_title span{
+    color: #191942;
+    margin: 0 5px;
+    font-weight: 600;
+}
+.subContent_title~p{
+    text-indent: 2em;
+    margin: 5px 0;
+    line-height: 22px;
+    text-align: justify;
+}
+/*4页面*/
+#content_representative3 aside{
+    width: 260px;
+    float: left;
+    padding-top: 15px;
+}
+#content_representative3 section{
+    float: left;
+    width: 940px;
+    box-sizing: border-box;
+    border-left: 2px solid #333;
+    padding-left: 8px;
+}
+#content_representative3 li{
+    list-style-position: inside;
+    list-style-type: square;
+    margin: 10px 0;
+}
+#content_representative3>aside li{
+    cursor: pointer;
+}
+#content_representative3 h3,#content_cctv4 h3{
+    text-align: center;
+    padding: 20px;
+    font-size: 26px;
+}
+#content_representative3 img{
+    width: 150px;
+    float: left;
+    margin-right: 10px;
+}
+#content_representative3 span{
+    text-align: justify;
+    width: 770px;
+    height: 213px;
+    display: inline-block;
+    text-indent: 2em;
+    line-height: 28px;
+}
+/* 4内容 */
+#content_cctv4{
+    text-align: center;
+}
+#content_cctv4 table{
+    border-top: 1px #666 solid;
+    border-bottom: 1px #666 solid;
+    width: 100%;
+    margin-top: 5px;
+    border-collapse: collapse;
+}
+#content_cctv4 td{
+    padding: 6px 111px 6px 0px;
+    border-top: 1px #666 dashed;
+}
+#content_cctv4 a{
+    text-decoration: none;
+    color: #666;
+}
